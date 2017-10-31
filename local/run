@@ -1,0 +1,24 @@
+#!/bin/bash
+
+source './log.sh'
+
+if [ "$#" -lt 2 ]; then
+  echo "Usage: $0 message command <arguments>"
+  exception "Unknown message"
+fi
+
+text="$1"
+shift
+
+log::info "running: $text"
+
+"$@"
+exit_code="$?"
+
+if [ $exit_code -eq 0 ]; then
+  log::ok "✓ $text finished"
+else
+  err "✗ $text failed"
+fi
+
+exit $exit_code
