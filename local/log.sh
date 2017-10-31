@@ -2,15 +2,16 @@
 
 # colors will be only aviable in interactive shell
 if [ -t 1 ]; then
-  readonly COLOR_DEF='\033[0;39m'
-  readonly COLOR_DGRAY='\033[1;40m'
-  readonly COLOR_LBLACK='\033[1;30m'
-  readonly COLOR_LRED='\033[1;31m'
-  readonly COLOR_LCYAN='\033[1;36m'
-  readonly COLOR_LGREEN='\033[1;32m'
-  readonly COLOR_LYELLOW='\033[1;33m'
-  readonly COLOR_LBLUE='\033[1;34m'
-  readonly COLOR_LMAGENTA='\033[1;35m'
+  COLOR_DEF='\033[0;39m'
+  COLOR_DIM=''
+  COLOR_DGRAY='\033[1;40m'
+  COLOR_LBLACK='\033[1;30m'
+  COLOR_LRED='\033[1;31m'
+  COLOR_LCYAN='\033[1;36m'
+  COLOR_LGREEN='\033[1;32m'
+  COLOR_LYELLOW='\033[1;33m'
+  COLOR_LBLUE='\033[1;34m'
+  COLOR_LMAGENTA='\033[1;35m'
 fi
 
 ts=$(date +%s)

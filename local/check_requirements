@@ -6,6 +6,8 @@ aws --version
 
 terraform --version
 
+kubectl version --client
+
 
 #cfssl version
 

@@ -1,16 +1,17 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-source './log.sh'
+CWD="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+source "${CWD}/log.sh"
 
 if [ "$#" -lt 2 ]; then
   echo "Usage: $0 message command <arguments>"
-  exception "Unknown message"
+  exception "Need the message as first arg with command"
 fi
 
 text="$1"
 shift
 
-log::info "running: $text"
+log::info "► running: $text"
 
 "$@"
 exit_code="$?"
